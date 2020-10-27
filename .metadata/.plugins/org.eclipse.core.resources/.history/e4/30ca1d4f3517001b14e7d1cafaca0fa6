@@ -1,0 +1,10 @@
+package com.sync;
+
+public class Account {
+	private int balance;
+	public Account() {}
+	public Account(int balance) {
+		this.balance = balance;
+	}
+
+}

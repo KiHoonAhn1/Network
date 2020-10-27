@@ -1,0 +1,38 @@
+package com.io;
+
+import java.io.BufferedOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Test3 {
+
+	public static void main(String[] args) {
+		User user = new User("id01", "ÀÌ¸»¼÷");
+		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+		ObjectOutputStream oos = null;
+		
+		try {
+			fos = new FileOutputStream("user.serial");
+			bos = new BufferedOutputStream(fos);
+			oos = new ObjectOutputStream(bos);
+			oos.writeObject(user);
+			System.out.println("Write COmplete");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(oos != null) {
+				try {
+					oos.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+	}
+
+}

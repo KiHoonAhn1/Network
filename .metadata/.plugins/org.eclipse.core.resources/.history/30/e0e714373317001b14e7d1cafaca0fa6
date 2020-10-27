@@ -1,0 +1,45 @@
+package com.thread;
+
+class Th1 extends Thread {
+	int sum;
+	@Override
+	public void run() {
+		for(int i=1; i<=20; i++) {
+			sum += i;
+		}
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	public int getSum() {
+		return sum;
+	}
+}
+class Th2 extends Thread {
+	int sum;
+		
+	@Override
+	public void run() {
+		for(int i=1; i<=40; i++) {
+			sum += i;
+		}
+	}
+	public int getSum() {
+		return sum;
+	}
+}
+
+public class Test5 {
+
+	public static void main(String[] args) { // 누가 더 많은 점유율을 가지고 동작하는지는 OS가 결정
+		Th1 th1 = new Th1();
+		Th2 th2 = new Th2();
+		th1.start();
+		th2.start();
+		System.out.println(th1.getSum()+" "+th2.getSum());
+		System.out.println(th1.getSum()+th2.getSum());
+	}
+
+}

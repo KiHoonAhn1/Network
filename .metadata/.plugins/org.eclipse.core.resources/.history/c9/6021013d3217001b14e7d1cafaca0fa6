@@ -1,0 +1,22 @@
+package com.thread;
+
+class Threads extends Thread {
+	String name;
+	
+	public T() {}
+	public T(String name) {
+		this.name = name;
+	}
+	
+}
+
+public class Test5 {
+
+	public static void main(String[] args) { // 누가 더 많은 점유율을 가지고 동작하는지는 OS가 결정
+		T t1 = new T("T1");
+		t1.start();
+		T t2 = new T("T2");
+		t2.start();
+	}
+
+}

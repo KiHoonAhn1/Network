@@ -1,0 +1,16 @@
+package com.io;
+
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class Test3 {
+
+	public static void main(String[] args) {
+		User user = new User("id01", "ÀÌ¸»¼÷")
+		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+		ObjectOutputStream oos = null;
+	}
+
+}

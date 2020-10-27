@@ -1,0 +1,8 @@
+package com.sync;
+
+public class Wth extends Thread { // Runnableµµ °¡´É
+	Account acc;
+	public Wth(Account acc) {
+		this.acc = acc;
+	}
+}

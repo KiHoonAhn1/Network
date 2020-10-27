@@ -1,0 +1,61 @@
+package com.thread;
+
+import java.util.Scanner;
+
+class Thread1 extends Thread {
+	
+	boolean flag = true;
+
+	public Thread1() {}
+	
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+	
+	@Override
+	public void run() { //source -> override -> run
+		System.out.println("Start");
+		while(true) { // while(true): 무한루프 
+			if(flag == false) {
+				System.out.println("Stop ...");
+				break;
+			}
+//			System.out.println("Connecting ...");
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("End"); //위에서 무한루프를 돌리면 여기까지 안 오기 때문에 오류가 난다
+		
+	}
+}
+public class Test3 {
+
+	public static void main(String[] args) throws InterruptedException { // 누가 더 많은 점유율을 가지고 동작하는지는 OS가 결정
+//		Thread1 t1 = new Thread1();
+//		t1.start();
+//		Thread.sleep(10000);
+//		t1.setFlag(false);
+		
+		
+		Thread1 t1 = new Thread1();
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println("Input Cmd");
+			String cmd = sc.nextLine();
+			if(cmd.equals("start")) {
+				t1 = new Thread1(); // 새로 만들어줘야 멈추고 다시 실행이 가능하다
+				t1.start();
+			}else if(cmd.equals("stop")) {
+				t1.setFlag(false);
+			}else {
+				break;
+			}
+		}
+		sc.close();
+		System.out.println("Exit Application ...")
+	}
+
+}

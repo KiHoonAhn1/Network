@@ -1,0 +1,18 @@
+package com.thread;
+
+class T1 extends Thread {
+
+	@Override
+	public void run() { //source -> override -> run
+
+	}
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		T1 t1 = new T1();
+		t1.start();
+	}
+
+}

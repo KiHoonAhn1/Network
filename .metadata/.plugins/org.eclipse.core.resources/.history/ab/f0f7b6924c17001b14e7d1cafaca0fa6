@@ -1,0 +1,47 @@
+package com.io;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		String file = "c:\\network\\day01\\src\\test.txt"; // 절대 디렉토리를 입력해줘야 함
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+		BufferedInputStream bis = null;
+		BufferedoutputStream bos = null;
+		try {
+			fis = new FileInputStream(file);
+			fos = new FileOutputStream("test2.txt"); //day01 폴더에 만들어짐
+			int data = 0;
+			while((data=fis.read()) != -1 ) {
+				fos.write(data);
+//				System.out.println((char)data);
+			}
+			System.out.println(fis.available());
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(fis != null) {
+			try {
+				fis.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			}
+			if(fos != null) {
+				try {
+					fos.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+}

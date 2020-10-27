@@ -1,0 +1,67 @@
+package com.sus;
+
+import java.util.Scanner;
+
+class Th extends Thread {
+
+	boolean stop = false;
+	boolean sus = false;
+	public void setStop(boolean stop) {
+		this.stop = stop;
+	}
+	public void setSus(boolean sus) {
+		this.sus = sus;
+	}
+	
+	@Override
+	public void run() {
+		while(true) {
+			if(stop == true) {
+				System.out.println("Stop Thread ...");
+				break;
+			}
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			if(sus != true) {
+				System.out.println("Downloading ...");
+				System.out.println("Downloading ...");
+			}
+		}
+		System.out.println("End Thread ...");
+	}
+
+}
+
+public class Test {
+	
+//	class Th extends Thread {
+//		
+//	}  이렇게 안에 만들면 변수를 함께 사용할 수 있어 좋다
+	
+	public static void main(String[] args) {
+		Th th = new Th();
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println("Input cmd");
+			String cmd = sc.nextLine();
+			if(cmd.equals("start")) {
+				th = new Th();
+				th.start();
+			}else if(cmd.equals("stop")) {
+				th.setStop(true);
+			}else if(cmd.equals("sus")) {
+				th.setSus(true);
+			}else if(cmd.equals("res")) {
+				th.setSus(false);
+			}else if(cmd.equals("q")) {
+				th.setSus(true);
+				break;
+			}
+		}
+		
+	}
+
+}

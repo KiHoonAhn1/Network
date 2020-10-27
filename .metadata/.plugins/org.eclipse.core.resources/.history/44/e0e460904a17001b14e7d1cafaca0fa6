@@ -1,0 +1,13 @@
+package com.io;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		String file = "test.txt";
+		FileInputStream fis = new FileInputStream(file);
+	}
+
+}

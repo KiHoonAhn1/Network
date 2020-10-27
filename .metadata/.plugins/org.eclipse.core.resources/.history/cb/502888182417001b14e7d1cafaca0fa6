@@ -1,0 +1,14 @@
+package com.thread;
+
+class T1{
+	
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}
