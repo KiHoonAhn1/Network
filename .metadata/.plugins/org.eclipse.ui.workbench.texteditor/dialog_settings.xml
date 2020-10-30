@@ -6,21 +6,23 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="makeOut"/>
 		<list key="findhistory">
+			<item value="makeout"/>
+			<item value="접속자"/>
+			<item value="ips"/>
+			<item value="readObject"/>
+			<item value="read"/>
+			<item value="maps"/>
+			<item value="hashmap"/>
+			<item value="hasnext"/>
+			<item value="cols"/>
+			<item value="nextLine"/>
 			<item value="["/>
 			<item value="11"/>
 			<item value="connected"/>
 			<item value="run"/>
 			<item value="dis"/>
-			<item value="receiver"/>
-			<item value="object"/>
-			<item value="msg"/>
-			<item value="tcp"/>
-			<item value="start"/>
-			<item value="nextLine"/>
-			<item value="Th"/>
-			<item value="T"/>
 		</list>
 		<list key="replacehistory">
 			<item value="T"/>
@@ -28,8 +30,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="950"/>
-		<item key="DIALOG_Y_ORIGIN" value="106"/>
+		<item key="DIALOG_X_ORIGIN" value="1200"/>
+		<item key="DIALOG_Y_ORIGIN" value="99"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
