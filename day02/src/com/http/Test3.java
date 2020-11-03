@@ -8,7 +8,7 @@ import java.util.Random;
 public class Test3 {
 
 	public static void main(String[] args) { // 차량, 보일러, IoT 장치에서 주기적으로 server에 위치 정보 
-		String urlstr = "http://192.168.0.19/network/car.jsp";
+		String urlstr = "http://192.168.0.9/network/car.jsp";
 		URL url = null;
 		HttpURLConnection con = null; //HttpURLConnection이 UrlConnection보다 기능이 많아서 좋다
 		Random r = new Random();

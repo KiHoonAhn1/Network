@@ -27,7 +27,6 @@ class Th extends Thread {
 			}
 			if(sus != true) {
 				System.out.println("Downloading ...");
-				System.out.println("Downloading ...");
 			}
 		}
 		System.out.println("End Thread ...");
